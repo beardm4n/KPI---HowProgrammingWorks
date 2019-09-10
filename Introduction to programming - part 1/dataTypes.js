@@ -6,7 +6,7 @@
  */
 
 // 1. C сигнатурой inc(n: number): number, пример вызова: let a = 5; const b = inc(a); console.dir({ a, b });
-let inc = (a) => a,
+let inc = a => ++a,
     a = 5;
 const b = inc(a);
 
@@ -19,7 +19,7 @@ let obj = {
    n: 5
 };
 
-let func = (num) => num.n = 'Hi';
+let func = num => ++num.n;
 
 func(obj);
 
@@ -33,7 +33,7 @@ console.dir(obj);
 
 // 1. Создайте массив, содержащий названия различных типов данных, в качестве элементов, пример: ['number', 'string', 'number']
 
-let arrayDataTypes = ['number', 'string', 'boolean', 'null', 'undefined', 'symbol', 'object'];
+let arrayDataTypes = [true, 'hi', 53, [25, 'name', {age: 25}], 'undefined', -25, {arr: [12, 'text', false]}];
 
 // 2. Создайте объект-коллекцию с именами типов в виде ключей и 0 в качестве значения, пример: { number: 0, string: 0 }
 //    и так далее для всех типов данных.
