@@ -31,3 +31,37 @@ console.dir(obj);
 =================================
  */
 
+// 1. Создайте массив, содержащий названия различных типов данных, в качестве элементов, пример: ['number', 'string', 'number']
+
+let arrayDataTypes = ['number', 'string', 'boolean', 'null', 'undefined', 'symbol', 'object'];
+
+// 2. Создайте объект-коллекцию с именами типов в виде ключей и 0 в качестве значения, пример: { number: 0, string: 0 }
+//    и так далее для всех типов данных.
+
+let objectDataTypes = {
+   number: 0,
+   string: 0,
+   boolean: 0,
+   null: 0,
+   undefined: 0,
+   symbol: 0,
+   object: 0
+};
+
+// 3. Пройдитесь по массиву циклом for..of и для каждого элемента массива, увеличивайте соответствующее значение в объекте-коллекции.
+
+for (let dataTypes in objectDataTypes) {
+   objectDataTypes[dataTypes] += 1;
+   console.log(dataTypes + ' : ' + objectDataTypes[dataTypes]);
+}
+
+// 4. Измените пример: удалите все ключи из начальной коллекции и добавляйте их динамически используя цикл.
+
+let emptyObjectDataTypes = {};
+
+for (let i = 0; i < 7; i++) {
+   let key = prompt('Input a key');
+   emptyObjectDataTypes[key] = prompt('Input a value');
+}
+
+console.log(emptyObjectDataTypes);
